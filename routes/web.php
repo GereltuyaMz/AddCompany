@@ -16,10 +16,3 @@ Route::get('/', function () {
 });
 
 Route::resource('companies', 'CompanyController');
-// Route::get('/', 'PagesController@index');
-
-// Route::get('/master', 'PagesController@master');
-
-// Route::get('/users/{id}', function ($id) {
-//     return 'This is user ' . $id;
-// });

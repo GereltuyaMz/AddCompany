@@ -70,8 +70,6 @@ class CompanyController extends Controller
     public function edit($id)
     {
         //update data and grabs the record pass to view
-        $company = Company::find($id);
-        return view('companies.edit', compact('company', 'company'));
     }
 
     /**
@@ -84,15 +82,6 @@ class CompanyController extends Controller
     public function update(Request $request, $id)
     {
         // grab original record by ID, then update it
-        $company = Company::findOrFail($id);
-        $this->validate($request, [
-            'company_name' => 'required',
-            'email' => 'required|email',
-            'phone_number' => 'required|numeric'
-        ]);
-        $input = $request->all();
-        $company->fill($input)->save();
-        return redirect()->route('companies.index');
     }
 
     /**

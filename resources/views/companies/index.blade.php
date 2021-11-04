@@ -4,9 +4,8 @@
 
   <h1 class="display-6">Companies</h1>
   <a href="{{route('companies.create')}}">Create New</a>
-  <hr/>
 
-  <table class="table">
+  <table class="table mt-3">
     <thead>
       <th>Company Name</th>
       <th>Email</th>
